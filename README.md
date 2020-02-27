@@ -3,8 +3,11 @@
 1. Set up a virtual Linux-based environment with Vagrant.
   
 I am using hashicorp/bionic64 image for virtual machine
+
 command "vagrant up" is creating and strating up my virtual machine
+
 in vagrantfile described configuration and how to provision machine
+
 Ansible installation and executing playbook is managed by mysetup.sh 
 
 2. Take a Java application source code: you may want to get JSudoku or any other freeware.
