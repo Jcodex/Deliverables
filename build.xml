@@ -1,0 +1,36 @@
+<project>
+
+<taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
+         classpath="checkstyle-8.29-all.jar"/>
+   
+    <target name="checkstyle">
+       <checkstyle config="sun_checks.xml">
+       <fileset dir="Sudoku-src" includes="**/*.java"/>
+       <formatter type="xml" toFile="checkstyle_errors.xml"/>
+       </checkstyle>
+    </target>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="Sudoku-src" destdir="build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="build/jar"/>
+        <jar destfile="/vagrant/sudoku.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="oyg.sudoku.CreateSudokuGUI"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="download">
+       <mkdir dir="/home/vagrant/antbuild/gitgud"/>
+       <get src="https://github.com/Jcodex/devopstask/archive/master.zip" dest="/home/vagrant/antbuild/gitgud"/>
+    </target>
+
+</project>
