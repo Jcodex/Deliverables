@@ -1,6 +1,6 @@
 # Deliverables
 
-1.	Set up a virtual Linux-based environment with Vagrant.
+1.Set up a virtual Linux-based environment with Vagrant.
   
 I am using hashicorp/bionic64 image for virtual machine
 command "vagrant up" is creating and strating up my virtual machine
