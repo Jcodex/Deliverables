@@ -20,8 +20,11 @@ https://github.com/Jcodex/devopstask
 build.xml consist of following targets:
 
   download - downloading code from repo
+  
   checkstyle - checking code in all .java files
+  
   compile - compiling project
+  
   jar - creating jar file
 
 5. Set up Jenkins job to build JSudoku using the build.xml build file.
