@@ -5,11 +5,6 @@
    sudo: yes
    name: play1
    tasks:
-     #- name: Install openjdk
-      # apt:
-       #  name: openjdk-8-jdk
-        # state: latest
-         #update_cache: yes
 
      - name: Install Ant
        apt:
