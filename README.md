@@ -18,6 +18,7 @@ https://github.com/Jcodex/devopstask
 4. Prepare Apache Ant build file build.xml
 
 build.xml consist of following targets:
+
   download - downloading code from repo
   checkstyle - checking code in all .java files
   compile - compiling project
