@@ -10,7 +10,7 @@ in vagrantfile described configuration and how to provision machine
 
 Jenkins job configuration (via copy paste config.xml), Ansible installation and executing playbook is managed by mysetup.sh
 
-After starting machine is ready to be used as Jenkins master. (you only need to log in and install the necessary plugins)
+After starting machine is ready to be used as Jenkins master and has 2 jobs online. You only need to log in and install recomended plugins + checkstyle plugin and restart Jenkins service.
 
 2. Take a Java application source code: you may want to get JSudoku or any other freeware.
 
