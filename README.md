@@ -4,13 +4,11 @@
   
 I am using hashicorp/bionic64 image for virtual machine
 
-command "vagrant up" is creating, configuring and strating up my virtual machine
+command "vagrant up" is creating configuring and strating up my virtual machine
 
 in vagrantfile described configuration and how to provision machine
 
-Jenkins job configuration (via copy paste config.xml), Ansible installation and executing playbook is managed by mysetup.sh
-
-After starting machine is ready to be used as Jenkins master and has 2 jobs online. You only need to log in and install recomended plugins + checkstyle plugin and restart Jenkins service.
+Jenkins configuration (via copy paste jobs), Ansible installation and executing playbook is managed by mysetup.sh 
 
 2. Take a Java application source code: you may want to get JSudoku or any other freeware.
 
@@ -18,20 +16,17 @@ Code downloaded from https://sourceforge.net/projects/jsudoku/files/jSudoku/jSud
   
 3. Create a GitHub repository and push the source code to it.
 
-I create 2 repositories for 2 different task solution
+I create 2 GitHub repositories to provide 2 solutions for the task
 
-First solution:
-
-In "devopstask" repository i stored both source code and all nedeed to job files. That files will be needed later to build app using git clone command powered by Jenkins. This solution doesn't match requirements that source code must be downloaded by Ant.
-But it feel more convinient to me and allow other users to manage build.xml file.
+First Solution:
 
 https://github.com/Jcodex/devopstask
 
-Second Soultion:
-
-In "devopsant" repository i stored only source code.
+I pushed both source code and all nedded to Jenkins job and ant files in "devopstask, in order to git clone it later with Jenkins and build app. It's doesn't match requirement which says that source code must be downloaded by ant, but it feel more convinient to me and provide build.xml file to other users.
 
 https://github.com/Jcodex/devopsant
+
+I pushed only source code to "devopsant" repository
   
 4. Prepare Apache Ant build file build.xml
 
@@ -47,24 +42,11 @@ build.xml consist of following targets:
 
 5. Set up Jenkins job to build JSudoku using the build.xml build file.
 
-I setup 2 Jenkins jobs:
-
 "First Job" clone my git repository then invoke ant and execute consistently "checkstyle", "compile", "jar" targets
-In order to invoke ant targets, build.xml was also pushed in git repository as well as checkstyle-8.29-all.jar and sun_checks.xml. Job is builded every 15 minutes of 6 hour on every Sundays (*/15 6 * * 7)
- 
- "Second Job" executing consistently next shell commands:
-cd /home/vagrant/build2job
+In order to invoke ant targets, build.xml was also pushed in git repository as well as checkstyle-8.29-all.jar and sun_checks.xml
 
-ant download
-
-ant checkstyle
-
-cp checkstyle_errors.xml /var/lib/jenkins/workspace/"Second Job"/
-
-ant compile
-
-ant jar
- 
+"Second Job" execute consistently following
+  
 6. Enhance the job by adding the code testing stage with Checkstyle or PMD.
 
 As a post-build action Jenkins publish checkstyle_errors.xml
