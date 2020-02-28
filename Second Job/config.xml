@@ -13,8 +13,10 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>ant download
+      <command>cd /home/vagrant/build2job
+ant download
 ant checkstyle
+cp checkstyle_errors.xml /var/lib/jenkins/workspace/&quot;Second Job&quot;/
 ant compile
 ant jar</command>
     </hudson.tasks.Shell>
@@ -54,5 +56,12 @@ ant jar</command>
       <pattern>checkstyle_errors.xml</pattern>
     </hudson.plugins.checkstyle.CheckStylePublisher>
   </publishers>
-  <buildWrappers/>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.38">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+      <disableDeferredWipeout>false</disableDeferredWipeout>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
 </project>
