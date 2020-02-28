@@ -50,7 +50,7 @@ build.xml consist of following targets:
 I setup 2 Jenkins jobs:
 
 "First Job" clone my git repository then invoke ant and execute consistently "checkstyle", "compile", "jar" targets
-In order to invoke ant targets, build.xml was also pushed in git repository as well as checkstyle-8.29-all.jar and sun_checks.xml
+In order to invoke ant targets, build.xml was also pushed in git repository as well as checkstyle-8.29-all.jar and sun_checks.xml. Job is builded every 15 minutes of every 6 hour of every Saturdays (*/15 5 7 * *)
  
  "Second Job" executing consistently next shell commands:
 cd /home/vagrant/build2job
