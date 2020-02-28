@@ -10,6 +10,8 @@ in vagrantfile described configuration and how to provision machine
 
 Jenkins configuration (via copy paste jobs), Ansible installation and executing playbook is managed by mysetup.sh 
 
+After machine is started up, it's ready to work as Jenkins master with 2 jobs online. You only need to install recommended plugins + checkstyle plugin and restart jenkins service.
+
 2. Take a Java application source code: you may want to get JSudoku or any other freeware.
 
 Code downloaded from https://sourceforge.net/projects/jsudoku/files/jSudoku/jSudoku-1.3/jSudoku-src-1.3.tar.gz/download
