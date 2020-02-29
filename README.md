@@ -8,11 +8,11 @@ command "vagrant up" is creating configuring and strating up my virtual machine
 
 in vagrantfile described configuration and how to provision machine
 
-Jenkins configuration (via copy paste jobs), Ansible installation and executing playbook is managed by mysetup.sh. 
+Jenkins configuration (via copy paste pre configured Jenkins), Ansible installation and executing playbook is managed by mysetup.sh. 
 
 In order to work vagrant directory should have: 
 
-"jobs" directory with jenkins jobs configurations
+manualy configured "jenkins" directory
 
 build.xml - ant configuration
 
@@ -20,7 +20,7 @@ play.yaml - ansible playbook
 
 checkstyle-8.29-all.jar and sun_checks.xml - checkstyle dependencies
 
-After machine is started up, it's ready to work as Jenkins master with 2 jobs online. You only need to install recommended plugins + checkstyle plugin and restart jenkins service.
+After machine is started up, it's ready to work as Jenkins master with 2 jobs online.
 
 2. Take a Java application source code: you may want to get JSudoku or any other freeware.
 
