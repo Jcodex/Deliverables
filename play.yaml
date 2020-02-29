@@ -6,6 +6,12 @@
    name: play1
    tasks:
 
+     - name: Install JDK
+       apt:
+         name: openjdk-8-jdk
+         state: latest
+         update_cache: yes
+
      - name: Install Ant
        apt:
          name: ant

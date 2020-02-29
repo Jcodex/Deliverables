@@ -20,7 +20,6 @@
     </target>
 
     <target name="jar">
-        <mkdir dir="build/jar"/>
         <jar destfile="/vagrant/sudoku.jar" basedir="build/classes">
             <manifest>
                 <attribute name="Main-Class" value="oyg.sudoku.CreateSudokuGUI"/>
@@ -29,8 +28,9 @@
     </target>
 
     <target name="download">
-       <mkdir dir="/home/vagrant/antbuild/gitgud"/>
-       <get src="https://github.com/Jcodex/devopstask/archive/master.zip" dest="/home/vagrant/antbuild/gitgud"/>
+       <get src="https://github.com/Jcodex/devopsant/archive/master.zip" dest="."/>
+       <unzip src="master.zip" dest="."/>
+       <move file="devopsant-master" tofile="Sudoku-src"/>
     </target>
 
 </project>
