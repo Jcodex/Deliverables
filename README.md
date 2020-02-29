@@ -4,7 +4,7 @@
   
 I am using hashicorp/bionic64 image for virtual machine
 
-command "vagrant up" is creating configuring and strating up my virtual machine
+command "vagrant up" is creating configuring and  then strating up my virtual machine
 
 in vagrantfile described configuration and how to provision machine
 
@@ -28,15 +28,15 @@ Code downloaded from https://sourceforge.net/projects/jsudoku/files/jSudoku/jSud
   
 3. Create a GitHub repository and push the source code to it.
 
-I create 2 GitHub repositories to provide 2 solutions for the task
+I created 2 GitHub repositories to provide 2 solutions for the task
 
 First Solution:
 
 https://github.com/Jcodex/devopstask
 
-I pushed both source code and all nedded to Jenkins job and ant files in "devopstask, in order to git clone it later with Jenkins and build app. It's doesn't match requirement which says that source code must be downloaded by ant, but it feel more convinient to me and provide build.xml file to other users.
+I pushed both source code and all needed to Jenkins job and ant files in "devopstask, in order to git clone it later with Jenkins and build the app. It's doesn't match requirement which says that source code must be downloaded by ant, but its feels more convinient to me and also provide build.xml file to other users.
 
-Second Soultion
+Second Solution
 
 https://github.com/Jcodex/devopsant
 
@@ -76,4 +76,3 @@ ant jar
 6. Enhance the job by adding the code testing stage with Checkstyle or PMD.
 
 As a post-build action Jenkins publish checkstyle_errors.xml
-
