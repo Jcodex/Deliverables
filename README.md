@@ -36,9 +36,11 @@ https://github.com/Jcodex/devopstask
 
 I pushed both source code and all nedded to Jenkins job and ant files in "devopstask, in order to git clone it later with Jenkins and build app. It's doesn't match requirement which says that source code must be downloaded by ant, but it feel more convinient to me and provide build.xml file to other users.
 
+Second Soultion
+
 https://github.com/Jcodex/devopsant
 
-I pushed only source code to "devopsant" repository
+I pushed only source code to "devopsant" repository, it will be used as a source for ant "download" target
   
 4. Prepare Apache Ant build file build.xml
 
