@@ -57,8 +57,21 @@ build.xml consist of following targets:
 "First Job" clone my git repository then invoke ant and execute consistently "checkstyle", "compile", "jar" targets
 In order to invoke ant targets, build.xml was also pushed in git repository as well as checkstyle-8.29-all.jar and sun_checks.xml
 
-"Second Job" execute consistently following
+"Second Job" execute consistently following shell commands
+
+cd /home/vagrant/build2job
+
+ant download
+
+ant checkstyle
+
+cp checkstyle_errors.xml /var/lib/jenkins/workspace/"Second Job"/
+
+ant compile
+
+ant jar
   
 6. Enhance the job by adding the code testing stage with Checkstyle or PMD.
 
 As a post-build action Jenkins publish checkstyle_errors.xml
+
